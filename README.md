@@ -20,8 +20,8 @@ graph LR
 2. **Model Optimization**: The YOLO11n model weights (`best.pt`) are loaded once and cached via `@st.cache_resource` to eliminate inference lag on slider updates or script reruns.
 3. **Inference**: Each frame is evaluated by the model using dynamic settings defined by the user (Confidence & IoU thresholds).
 4. **Denomination Mapping**: The model's raw class predictions are passed through an exact dual-sided classification dictionary:
-   - **5 EGP**: Class 10
-   - **10 EGP**: Classes 0, 1, 3
+   - **5 EGP**: Class 10, 0
+   - **10 EGP**: Classes  1, 3
    - **20 EGP**: Classes 5, 9
    - **50 EGP**: Classes 2, 8
    - **100 EGP**: Classes 4, 11
